@@ -28,6 +28,7 @@ class bolera():
         numero_t=random.randint(0,10)
         tirada=str(numero_t)
         print("Numero de bolos tirados: " + str(numero_t))
+
         if numero_t==10:
             print("Enhorabuena!! HAS HECHO PLENO!!!")
         else:
@@ -89,8 +90,14 @@ class bolera():
 
 
 
+
+
+
+
+
+
         
 bol=bolera([])
 
-bol.menu()
+print(bol.menu())
 
