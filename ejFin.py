@@ -5,6 +5,7 @@ Nuestro objetivo es adivinar el número. Si fallamos nos dirán si es mayor o me
 
 '''
 "FINN"
+'''
 from random import *
  
 def generaNumeroAleatorio(minimo,maximo):
@@ -40,7 +41,7 @@ while not encontrado:
         encontrado = True
         print("Has acertado el número correcto es " , numero_usuario, " te ha llevado ", intentos," intentos")
 
-
+'''
 '''
 
 
@@ -54,6 +55,33 @@ Nombre de usuario con más de 12 caracteres, retorna el mensaje "El nombre de us
 Nombre de usuario con caracteres distintos a los alfanuméricos, retorna el mensaje "El nombre de usuario puede contener solo letras y números".
 Nombre de usuario válido, retorna True.
 
+'''
+def validar():
+    nombre_usuario = input('Introduce nombre de usuario: ')
+
+    numeros = ['0','1','2','3','4','5','6','7','8','9']
+    str = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'
+    letras = []
+    for l in str:
+        letras.append(l)
+    cond=True
+    while cond:
+        if len(nombre_usuario) < 6 or len(nombre_usuario) > 12:
+            print('El nombre debe tener entre 6 y 12 caracteres.')
+            nombre_usuario = input('Introduce nombre de usuario: ')
+        else:
+            for e in nombre_usuario:
+                if e.upper() not in letras and e not in numeros:
+                    print('Los caracteres solo pueden ser números o letras')
+                    nombre_usuario = input('Introduce nombre de usuario: ')
+                else:
+                    cond=False
+    return nombre_usuario
+    
+    
+
+print(validar())
+'''
 6.6.2. Ejercicio 2
 Crear un módulo para validación de contraseñas. Dicho módulo, deberá cumplir con los siguientes criterios de aceptación:
 
