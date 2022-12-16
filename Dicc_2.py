@@ -15,11 +15,6 @@ def creac_Dic():
 #print(dic1)
 
 
-
-
-
-
-
 # Escribe un programa que lea una cadena y devuelva un diccionario con la cantidad de apariciones de cada carácter en la cadena. 
 def reps_cadena():
     dict = {}
@@ -35,6 +30,23 @@ def reps_cadena():
 #dic2=reps_cadena()
 #print(dic2)
 
+
+
+
+def numeroVeces():
+    dic={}
+    cadena=input('Introduce algo: ')
+    for i in cadena:
+
+        if i not in dic:
+            dic[i]=1
+        else:
+            dic[i]+=1
+
+    return dic
+
+#print(numeroVeces())
+        
 
 # Vamos a crear un programa en python donde vamos a declarar un diccionario para guardar 
 # los precios de las distintas frutas. El programa pedirá el nombre de la fruta 
@@ -58,6 +70,23 @@ def programa_frutas():
 #programa_frutas()
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Escribir un programa que implemente una agenda. En la agenda se podrán guardar nombres y números de teléfono. 
 # El programa nos dará el siguiente menú:
 # 
@@ -78,7 +107,7 @@ def agenda():
         print("3. Borrar")
         print("4. Listar")
         print("5. Salir")
-        
+
         opcion = int(input("Dime opción:"))
         if opcion == 1:
             nombre = input("Nombre del contacto:")    
@@ -112,7 +141,7 @@ def agenda():
         else:
             print("Opción incorrecta")
 
-        
+agenda()
 
 
 
@@ -270,4 +299,6 @@ def fun(array):
     return dic,numEl
 
 #print(fun([1,3,5,7,2]))
+
+
 
